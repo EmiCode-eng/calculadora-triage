@@ -154,6 +154,7 @@ export const ResultadoTriage = () => {
                         <button type="button" onClick={() => darDeAlta()} className="font-medium rounded-lg text-base px-6 py-3.5  text-center text-green-700 border-green-700 hover:text-white border  hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:border-green-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
                             Dar de Alta
                         </button>
+                        {triage ? console.log(triage.consultorioAsignado) : <></>}
                         {!triage ? "" 
                             : triage.consultorioAsignado !== 0 ? <button type="button" className="disabled cursor-not-allowed px-6 py-3.5 text-base font-medium text-white rounded-lg text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Asignar Medico</button> 
                             : <button type="button" onClick={() => setTriage({...triage, consultorioAsignado: asignarConsultorio(nss)})} className="px-6 py-3.5 text-base font-medium text-white rounded-lg text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Asignar Medico</button>

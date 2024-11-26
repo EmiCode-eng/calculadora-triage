@@ -59,7 +59,6 @@ export const Traige = () => {
       colorPiel: "Normal",
       dolor: ""
     });
-    const [consultorio, setConsultorio] = useState(0)
 
     const handleSubmit = async (e) => {
       e.preventDefault();
@@ -69,6 +68,7 @@ export const Traige = () => {
         razonConsulta,
         signosVitales,
         estadoPaciente,
+        consultorioAsignado: 0,
         fecha: new Date().toISOString(),
       };
 
